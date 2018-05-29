@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[weibo脚本]]></title>
+    <url>%2Fposts%2Fweibo.html</url>
+    <content type="text"><![CDATA[当浮一大白 过程进入她的微博，点击“她的相册”；这时页面已经加载了一些代码，如果需要全部的照片，需要自己一直往下滑动，直到底部。 按下F12，打开开发者控制台，粘贴Javascript代码；执行。 结果 脚本github🔗]]></content>
+      <tags>
+        <tag>JavaScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[tar惨案]]></title>
+    <url>%2Fposts%2Ftar%E6%83%A8%E6%A1%88.html</url>
+    <content type="text"><![CDATA[如何将一个tar文档解压到指定的目录how to use tar to extract file into the specific directory无论是百度还是谷歌，我都懒得打，酿成了一场悲剧。 人生不过从头再来 今天周五，应该交lab1-datalab的，所以便开始做了。只做了前三题，第四题要求计算出一个数对应的二进制有多少个1，正在苦苦思考中。 这时问题来了，dlc文件执行不了，Google了也没有结果。我就想把压缩包里的文件再解压一次，说不定原始文件没有问题。结果解压之后覆盖了原文件夹，之前写的代码全没了。 一定要牢记正确的命令: 12tar -xvf datalab-handout.tar -C datalab # 解压缩tar -cvf datalab-handout datalab # 压缩]]></content>
+      <tags>
+        <tag>unix</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Linux Boot Camp]]></title>
+    <url>%2Fposts%2F15213-Week2-1.html</url>
+    <content type="text"><![CDATA[My Heart is in the Work. Github Shortcuts### 初始配置 ### git config --global user.name "---" git config --global user.email "----@----" ### 常用命令 ### git init # 创建初始仓库 git add * # 增加所有文件 git add &lt;file_name&gt; # 增加指定文件 git add "*.txt" # 增加所有txt文件 git commit -m "commit mesage" # commit git log # 显示日志 git log --pretty=oneline git remote add &lt;remote_name&gt; &lt;remote_repo_url&gt; git push -u origin master # -u告诉git记住后面的参数“origin master”,下次直接git push git pull origin master git diff HEAD git reset &lt;target&gt; git checkout &lt;target&gt; # 跳转到target，target可以是branch，也可以是commit的代码 git branch &lt;branch_name&gt; # 创建新的分支 git branch -d &lt;branch_name&gt; # 删除分支 git checkout &lt;branch_name&gt; # 切换到分支 git merge &lt;branch_name&gt; # 在master分支，合并其他分支；先使用git checkout master git rm "*.txt" ### revert ### git revert HEAD git reset --hard HEAD~1 Terminal ShortcutsCtrl + A : 跳到行首Ctrl + E : 跳到行尾Ctrl + U : 清楚当前行Ctrl + C : kill当前进程Ctrl + L : == clear命令 Something Funvimtutor # vim教程 ls | grep foo # 查找当前目录下的文件 Github交互教程Github详细教程]]></content>
+      <tags>
+        <tag>15213</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[不知道第几届的Wishare]]></title>
+    <url>%2Fposts%2FWishare.html</url>
+    <content type="text"><![CDATA[A清汤拉面这题简单，找到规律🌝 #include &lt;iostream&gt; using namespace std; int main(void) { int a, b, c; int N; int maxNum; int t = 0; cin &gt;&gt; N; while(N--) { cin &gt;&gt; a &gt;&gt; b &gt;&gt; c; maxNum = a &gt; b ? a : b; maxNum = maxNum &gt; c ? maxNum : c; t = (maxNum-a) + (maxNum-b) + (maxNum-c); if(t % 2 == 0) cout &lt;&lt; t/2 &lt;&lt; endl; else cout &lt;&lt; (t+1)/2+1 &lt;&lt; endl; } return 0; } B味增拉面不会🌚，看样子要图 C货物处理不会🌚，要用到动态规划，忘了 DZ队长请客这题，说来话长了，以开始用的map，超时了；后来从这从前往后，找到错误往前回溯，没超时，但是答案错误。。。 E这是一道水题最长公共子序列，照书上抄了一遍 #include &lt;iostream&gt; #include &lt;string&gt; using namespace std; int main(void) { int m, n; cin &gt;&gt; m &gt;&gt; n; string str1; string str2; cin &gt;&gt; str1; cin &gt;&gt; str2; str1 = "0" + str1; str2 = "0" + str2; int **c = new int*[m+1]; for(int i = 0; i &lt;= m; i++) { c[i] = new int[n]; } for(int i = 0; i &lt;= m; i++) c[i][0] = 0; for(int i = 0; i &lt;= n; i++) c[0][i] = 0; for(int i = 1; i &lt;= m; i++) for (int j = 1; j &lt;= n; j++) { if(str1[i] == str2[j]) c[i][j] = c[i-1][j-1]+1; else if (c[i-1][j]&gt;=c[i][j-1]) c[i][j] = c[i-1][j]; else c[i][j] = c[i][j-1]; } cout &lt;&lt; m+n- 2* c[m][n] &lt;&lt; endl; return 0; } F听说有人请吃饭？组合问题，不会 G听说有人请吃水林间？这题简单，磨一个面会有四个面变小，如果这四个面中对方占三个，那就赢了 #include &lt;iostream&gt; using namespace std; int main(void) { int table[7][4] = { {0, 0, 0, 0}, {2, 3, 4, 5}, {1, 3, 4, 6}, {1, 2, 5, 6}, {1, 2, 5, 6}, {1, 3, 4, 6}, {2, 3, 4, 5} }; int a, b, c; while(cin &gt;&gt; a &gt;&gt; b &gt;&gt; c) { int relt = 0; int count; for(int i = 1; i &lt;= 6; i++) { count = 0; for(int j = 0; j &lt;= 3; j++) { if(a == table[i][j]) ++count; if(b == table[i][j]) ++count; if(c == table[i][j]) ++count; } if (count &gt;= 3) { relt = i; break; } } cout &lt;&lt; relt &lt;&lt; endl; } } H琪露诺的难题关于数论，素勾股数，通过Google知道了，需满足下面条件 a = m^2 - n^2 b = 2mn c = m^2 + n^2 m、n互质，一个为奇数，一个为偶数 n &lt; m &lt; sqrt(s / 2) 超时 IZPP还能再皮下去吗？不会，题都没看 JZPP和GJLLLL字符串组合，可以相互插，但是顺序不能变]]></content>
+      <tags>
+        <tag>NOJ</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Hello World]]></title>
+    <url>%2Fposts%2Fhello-world.html</url>
+    <content type="text"><![CDATA[终于建立起了自己的第一个blog，哈哈哈 一切才刚刚开始 罗马不是一天建成的 更改文件夹所属用户我使用的是MacDown软件来编写md文件，但是_posts文件夹下的文件打不开，因为没有权限，用户为root，安装时必须用root用户。改文件夹里的所有文件的用户即可。 sudo -s chown -R js hexo 获取时间戳用在Front-matter的date、updated。 date "+%Y/%m/%d %H:%M:%S" 增加了Google分析Google搜索Google分析，注册一下，填写相关信息，最终获取到UA，在主题文件夹下的“_config.yml”中修改”google_analytics“。next网站上写的很清楚 帮助博客和文档 next网站hexo网站🙏这位博主写的详细教程]]></content>
+  </entry>
+</search>
