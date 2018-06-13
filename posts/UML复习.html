@@ -84,7 +84,7 @@
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="Chapter 1: Introducing Object-Oriented Analysis and DesignSoftware Development Life Cycle(SDLC)    * feasibility analysis -&amp;gt; feasibility report * requirements analysis and specification -&amp;gt; softw">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-06-12T14:48:54.366Z">
+<meta property="og:updated_time" content="2018-06-13T07:37:17.455Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UML复习">
 <meta name="twitter:description" content="Chapter 1: Introducing Object-Oriented Analysis and DesignSoftware Development Life Cycle(SDLC)    * feasibility analysis -&amp;gt; feasibility report * requirements analysis and specification -&amp;gt; softw">
@@ -386,6 +386,140 @@
 * polymorphism
 </code></pre><p>OOAD is analysis of requirements and design of software system in terms of the objects, classes, encapsulation, inheritance, polymorphism, abstraction, and dynamic binding.</p>
 <h2 id="Chapter-2-Introducing-UML"><a href="#Chapter-2-Introducing-UML" class="headerlink" title="Chapter 2: Introducing UML"></a>Chapter 2: Introducing UML</h2><p>Unified Modeling Language(UML) is a standard language for creating blueprints that depict the structure and design of the software system.</p>
+<p>UML Diagrams</p>
+<pre><code>* requirements modeling
+    * use cases diagrams
+* static modeling
+    * class diagrams
+    * objects diagrams
+    * composite structure diagrams
+* dynamic modeling
+    * communication diagrams
+    * sequence diagrams
+    * timing diagrams
+    * activity diagrams
+    * state machine diagrams
+    * interaction overview diagrams
+* architecture modeling
+    * package diagrams
+    * ~component diagrams~
+    * deployment diagrams
+</code></pre><h2 id="Chapter-3-Understanding-Requirements-Modeling"><a href="#Chapter-3-Understanding-Requirements-Modeling" class="headerlink" title="Chapter 3: Understanding Requirements Modeling"></a>Chapter 3: Understanding Requirements Modeling</h2><p>requirements can be classified as functional and non-functional.</p>
+<p>phases of requirements management</p>
+<pre><code>* requirements gathering
+* requirements analysis and negotiation
+* requirements specification
+* requirements validation
+</code></pre><p>The relationships between use cases and actors: ~association~<br>The relationships between actors and actors: ~generalization~<br>The relationships between use cases and use cases: ~extend~, ~include~</p>
+<h2 id="Chapter-4-Migrating-from-Requirements-to-Design"><a href="#Chapter-4-Migrating-from-Requirements-to-Design" class="headerlink" title="Chapter 4: Migrating from Requirements to Design"></a>Chapter 4: Migrating from Requirements to Design</h2><p>System boundaries</p>
+<pre><code>* rectangular box
+* inside: ~use cases~, outside: ~actors~
+</code></pre><h2 id="Chapter-5-Understanding-Static-Modeling"><a href="#Chapter-5-Understanding-Static-Modeling" class="headerlink" title="Chapter 5: Understanding Static Modeling"></a>Chapter 5: Understanding Static Modeling</h2><p>Static modeling is used to represent the structure constituents of a software system.</p>
+<p>The physical structure of a software consists of classes, objects, interfaces and their relationships with each other.</p>
+<p>Class diagrams:</p>
+<pre><code>* three compartments: class name, attributes, methods
+* visibility: &lt;‘+’, public&gt;, &lt;‘-‘, private&gt;, &lt;‘#’, protected&gt;, &lt;‘~’, package&gt;
+* syntax for attributes: -purchaseDate: Date [1] = “01-01-2000” {readOnly}
+* syntax for operations: +generatePurchaseList(prodID: Int): String
+</code></pre><p>Object diagrams:  </p>
+<pre><code>* two compartments: object name, attributes
+</code></pre><p>Relationships in Class and Object Diagrams:</p>
+<pre><code>* Associations
+    * Aggregation: Computer, CPU, GPU
+    * Composition: People, Hand, Leg
+* Dependency
+    * 虚箭头
+* Generalization
+    * 空心三角箭头
+* Relization
+    * 需空心三角箭头
+</code></pre><h2 id="Chapter-6-More-about-Static-Modeling"><a href="#Chapter-6-More-about-Static-Modeling" class="headerlink" title="Chapter 6: More about Static Modeling"></a>Chapter 6: More about Static Modeling</h2><p>Types of Classes:</p>
+<pre><code>* Abstract class
+    * does not have any direct instances
+    * used to define the common features and common behavior of a set of subclasses
+* Parameterized class(template class)
+* Factory class
+    * A class that has multiple objects having the same attribute value
+* self-linked class
+    * more than one role
+</code></pre><h2 id="Chapter-7-Understanding-Dynamic-Modeling"><a href="#Chapter-7-Understanding-Dynamic-Modeling" class="headerlink" title="Chapter 7: Understanding Dynamic Modeling"></a>Chapter 7: Understanding Dynamic Modeling</h2><p>Dynamic modeling is used to represent the behavior of the structure constituents.</p>
+<p>Difference between Static and Dynamic Modeling</p>
+<pre><code>* Static Modeling
+    * represents the static or structural constituents of a software system.
+    * structural modeling
+    * includes class and object diagrams
+    * helps in depicting the relationships and dependencies between the constituents of a system
+* Dynamic Modeling
+    * represents the behavior of static constituents of a software system.
+    * behavior modeling
+    * includes interaction, activity, and state diagrams
+    * helps in expressing and modeling the behavior of a system over a period of time
+</code></pre><h2 id="Chapter-8-More-about-Dynamic-Modeling"><a href="#Chapter-8-More-about-Dynamic-Modeling" class="headerlink" title="Chapter 8: More about Dynamic Modeling"></a>Chapter 8: More about Dynamic Modeling</h2><p>State Machine Diagrams</p>
+<pre><code>* constituents: state machines, events and transitions
+* events: call event, signal event, time event
+</code></pre><p>Activity Diagrams</p>
+<pre><code>* basic elements
+    * action states
+    * activity states
+    * transition
+    * decision
+</code></pre><h2 id="Chapter-9-Understanding-Software-Architecture"><a href="#Chapter-9-Understanding-Software-Architecture" class="headerlink" title="Chapter 9: Understanding Software Architecture"></a>Chapter 9: Understanding Software Architecture</h2><p>Component Diagrams</p>
+<pre><code>* deployment components: DLLs, EXEs
+* work product components: source code files, data files
+* execution components: components that are created at runtime. COM+ objects.
+</code></pre><h2 id="Chapter-10-Using-Frameworks-and-Patterns"><a href="#Chapter-10-Using-Frameworks-and-Patterns" class="headerlink" title="Chapter 10: Using Frameworks and Patterns"></a>Chapter 10: Using Frameworks and Patterns</h2><p>A framework is a set of classes that provides the basic functions for a particular domain.</p>
+<p>A pattern is a set of principles and guidelines that provide the standard solution to a given problem. Patterns make the classes used in developing the software system independent to ensure that the classes remain reusable and manageable.</p>
+<p>Patterns are generally categorized into two categories:</p>
+<pre><code>* General Responsibility Assignment Software Patterns(GRASP)
+* Gang of Four(GoF) patterns
+</code></pre><p>GRASP is a set of patterns that provides the principles of assigning responsibilities to objects.</p>
+<pre><code>* Expert
+* Creator
+* Controller
+</code></pre><p>GoF patterns suggest that the design should be open to extension and close to modification. GoF should make the design flexible enough to accommodate new changes without modifying the existing code. GoF is also known as <strong>design patterns</strong>.</p>
+<p>GoF are categorized into three types:</p>
+<pre><code>* ~Creational~:  provides techniques for creating objects and managing the lifecycle of the objects.
+    * ~Factory~
+        * factory class controls the lifetime of the objects of the subclasses of an abstract base class.
+        * factory method returns the required object of the subclasses depending on its arguments.
+    * ~Builder~
+    * ~Singleton~
+* ~Structural~: describe how classes and objects can be combined to form lager structures using object composition.
+    * Composite
+    * Proxy
+    * Decorator
+    * Facade
+* ~Behavioral~: provide guidelines for enabling communication between two objects.
+    * Chain of Responsibility
+    * Command
+    * Observer
+</code></pre><h2 id="Chapter-11-UML-and-Quality-Software-Processes"><a href="#Chapter-11-UML-and-Quality-Software-Processes" class="headerlink" title="Chapter 11: UML and Quality Software Processes"></a>Chapter 11: UML and Quality Software Processes</h2><p>The goal of quality process is to examine the quality of software models and products developed during the software development process.</p>
+<p>Three dimensions:</p>
+<pre><code>* Technology(what)
+* Methodology(how)
+* Sociology(who)
+</code></pre><p>Tailoring UML<br>The process of modifying and extending UML using extensions elements is known as tailoring UML. Three types of extension elements:</p>
+<pre><code>* Stereotypes: extend the vocabulary of UML
+* Constraints: extend the semantics of building blocks of UML
+* Tagged Values: extend the properties of building blocks of UML
+</code></pre><h2 id="Chapter-12-Measuring-Software-Projects"><a href="#Chapter-12-Measuring-Software-Projects" class="headerlink" title="Chapter 12: Measuring Software Projects"></a>Chapter 12: Measuring Software Projects</h2><p>Adjustment Factor = actual productivity / planned productivity</p>
+<p>Function points</p>
+<pre><code>* 用程序的输入输出操作及系统数据文件来衡量应用程序规模的方法
+</code></pre><p>How to calculate Function Points(FP)</p>
+<ol>
+<li>TUFP(total unadjusted function points)<ul>
+<li>ILF, EIF, EI, EO, EQ</li>
+</ul>
+</li>
+<li>VAF(value adjustment factor)<ul>
+<li>VAF = TDI * 0.01 + 0.65 </li>
+</ul>
+</li>
+<li>AFP(adjusted function point)<ul>
+<li>AFP = (TUFP + CUP) * VAF</li>
+</ul>
+</li>
+</ol>
 
       
     </div>
@@ -557,7 +691,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-1-Introducing-Object-Oriented-Analysis-and-Design"><span class="nav-number">1.</span> <span class="nav-text">Chapter 1: Introducing Object-Oriented Analysis and Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-2-Introducing-UML"><span class="nav-number">2.</span> <span class="nav-text">Chapter 2: Introducing UML</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-1-Introducing-Object-Oriented-Analysis-and-Design"><span class="nav-number">1.</span> <span class="nav-text">Chapter 1: Introducing Object-Oriented Analysis and Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-2-Introducing-UML"><span class="nav-number">2.</span> <span class="nav-text">Chapter 2: Introducing UML</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-3-Understanding-Requirements-Modeling"><span class="nav-number">3.</span> <span class="nav-text">Chapter 3: Understanding Requirements Modeling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-4-Migrating-from-Requirements-to-Design"><span class="nav-number">4.</span> <span class="nav-text">Chapter 4: Migrating from Requirements to Design</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-5-Understanding-Static-Modeling"><span class="nav-number">5.</span> <span class="nav-text">Chapter 5: Understanding Static Modeling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-6-More-about-Static-Modeling"><span class="nav-number">6.</span> <span class="nav-text">Chapter 6: More about Static Modeling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-7-Understanding-Dynamic-Modeling"><span class="nav-number">7.</span> <span class="nav-text">Chapter 7: Understanding Dynamic Modeling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-8-More-about-Dynamic-Modeling"><span class="nav-number">8.</span> <span class="nav-text">Chapter 8: More about Dynamic Modeling</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-9-Understanding-Software-Architecture"><span class="nav-number">9.</span> <span class="nav-text">Chapter 9: Understanding Software Architecture</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-10-Using-Frameworks-and-Patterns"><span class="nav-number">10.</span> <span class="nav-text">Chapter 10: Using Frameworks and Patterns</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-11-UML-and-Quality-Software-Processes"><span class="nav-number">11.</span> <span class="nav-text">Chapter 11: UML and Quality Software Processes</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Chapter-12-Measuring-Software-Projects"><span class="nav-number">12.</span> <span class="nav-text">Chapter 12: Measuring Software Projects</span></a></li></ol></div>
             
 
           </div>
