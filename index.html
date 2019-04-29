@@ -1,644 +1,243 @@
 <!DOCTYPE html>
-
-
-
-
-<html class="theme-next pisces" lang="en">
+<html  lang="en">
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-<meta name="theme-color" content="#222">
+    <meta charset="utf-8">
+<title>Blog</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-
-
-
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
-
-
-
-
-
-
-
-<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
-
-
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
-
-
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
-
-
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="Hexo, NexT" />
-
-
-
-
-
-
-
-
-
-
-<meta property="og:type" content="website">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="Blog">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="http://yoursite.com/images/og_image.png">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Blog">
-
-
-
-<script type="text/javascript" id="hexo.configurations">
-  var NexT = window.NexT || {};
-  var CONFIG = {
-    root: '/',
-    scheme: 'Pisces',
-    version: '5.1.4',
-    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
-    tabs: true,
-    motion: {"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: 'Author'
-    },
-    algolia: {
-      applicationID: '',
-      apiKey: '',
-      indexName: '',
-      hits: {"per_page":10},
-      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
-    }
-  };
-</script>
-
-
-
-  <link rel="canonical" href="http://yoursite.com/"/>
+<meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
 
 
 
-  <title>Blog</title>
-  
 
 
 
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-  ga('create', 'UA-117591844-1', 'auto');
-  ga('send', 'pageview');
-</script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.7.2/css/bulma.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,600|Source+Code+Pro">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css">
 
 
+    
+    
+    
+    <style>body>.footer,body>.navbar,body>.section{opacity:0}</style>
+    
+
+    
+    
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/css/lightgallery.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/css/justifiedGallery.min.css">
+    
+
+    
+    
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.css">
 
 
+    
+    
+    
+    
 
+<link rel="stylesheet" href="/css/back-to-top.css">
+
+
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+<link rel="stylesheet" href="/css/progressbar.css">
+<script src="https://cdn.jsdelivr.net/npm/pace-js@1.0.2/pace.min.js"></script>
+
+    
+    
+    
+
+    
+    
+    
+
+
+<link rel="stylesheet" href="/css/style.css">
 </head>
-
-<body itemscope itemtype="http://schema.org/WebPage" lang="en">
-
-  
-  
-    
-  
-
-  <div class="container sidebar-position-left 
-  page-home">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-brand-wrapper">
-  <div class="site-meta ">
-    
-
-    <div class="custom-logo-site-title">
-      <a href="/"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Blog</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
+<body class="is-3-column">
+    <nav class="navbar navbar-main">
+    <div class="container">
+        <div class="navbar-brand is-flex-center">
+            <a class="navbar-item navbar-logo" href="/">
+            
+                <img src="/images/logo.svg" alt="Blog" height="28">
+            
+            </a>
+        </div>
+        <div class="navbar-menu">
+            
+            <div class="navbar-start">
+                
+                <a class="navbar-item is-active"
+                href="/">Home</a>
+                
+                <a class="navbar-item"
+                href="/archives">Archives</a>
+                
+                <a class="navbar-item"
+                href="/about">About</a>
+                
+            </div>
+            
+            <div class="navbar-end">
+                
+                
+                
+                <a class="navbar-item search" title="Search" href="javascript:;">
+                    <i class="fas fa-search"></i>
+                </a>
+                
+            </div>
+        </div>
     </div>
-      
-        <p class="site-subtitle">My Heart is in the Work.</p>
-      
-  </div>
-
-  <div class="site-nav-toggle">
-    <button>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-      <span class="btn-bar"></span>
-    </button>
-  </div>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
-            
-            Home
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
-            
-            Tags
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
-            
-            Archives
-          </a>
-        </li>
-      
-
-      
-        <li class="menu-item menu-item-search">
-          
-            <a href="javascript:;" class="popup-trigger">
-          
-            
-              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
-            
-            Search
-          </a>
-        </li>
-      
-    </ul>
-  
-
-  
-    <div class="site-search">
-      
-  <div class="popup search-popup local-search-popup">
-  <div class="local-search-header clearfix">
-    <span class="search-icon">
-      <i class="fa fa-search"></i>
-    </span>
-    <span class="popup-btn-close">
-      <i class="fa fa-times-circle"></i>
-    </span>
-    <div class="local-search-input-wrapper">
-      <input autocomplete="off"
-             placeholder="Searching..." spellcheck="false"
-             type="text" id="local-search-input">
-    </div>
-  </div>
-  <div id="local-search-result"></div>
-</div>
-
-
-
-    </div>
-  
 </nav>
-
-
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div class="content-wrap">
-          <div id="content" class="content">
-            
-  <section id="posts" class="posts-expand">
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/折腾VPS的一天.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-8-tablet is-8-desktop is-6-widescreen has-order-2 column-main">
+    <div class="card">
     
-      <header class="post-header">
-
+    <div class="card-content article ">
         
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-21T08:29:30.000Z">2019-04-21</time>
                 
-                <a class="post-title-link" href="/posts/折腾VPS的一天.html" itemprop="url">折腾VPS的一天</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-21T16:29:30+08:00">
-                2019-04-21
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    10 minutes read (About 1484 words)
+                </span>
+                
+                
+            </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
         
-          
-            <h1 id="折腾VPS的一天"><a href="#折腾VPS的一天" class="headerlink" title="折腾VPS的一天"></a>折腾VPS的一天</h1><h2 id="一、前言"><a href="#一、前言" class="headerlink" title="一、前言"></a>一、前言</h2><p>上个星期刚刚在vultr上买了一台VPS主机，配置如下</p>
-<pre><code>Location: New Jersey
-CPU: 1vCore
-RAM: 512MB
-Storage: 10GB SSD
-Bandwidth: 500GB
-OS: CentOS 6 x64
-Price: $3.5/mo
-</code></pre><h2 id="二、经过"><a href="#二、经过" class="headerlink" title="二、经过"></a>二、经过</h2><p>对于这台VPS来说，建好了人尽皆知的功能后，我就再也没有动它，直到昨天。</p>
-<p>考研失败之后，开始学习C++，光看书是不行的，我很想知道国外学校是如何学习的，他们都做了什么。周五，我就去Google搜索，”C++ course edu”。终于在第一页，就找到了比较合适的课程，Stanford <a href="http://web.stanford.edu/class/archive/cs/cs106b/cs106b.1194/" target="_blank" rel="noopener">CS106B</a>、CS106X和<a href="http://web.stanford.edu/class/cs106l/index.html" target="_blank" rel="noopener">CS106L</a>。</p>
-<p>先学CS 106B，找到了2019 Spring的课程，课程主页上的链接文件都能下载到，无论是Handout，还是Assignment，还是Code都可以下载到，其他学期的页面不行，会跳转到Stanford的服务器，要求登录。这算是第一步。</p>
-<p>第二步，就是去YouTube搜索视频，果然搜索到了，是课程教授上传的，很开心。唯一不足的是，视频是电脑的录屏，只能看电脑，看不见人。</p>
-<p>第三步，就是下载整个播放列表了。</p>
-<pre><code>youtube-dl --yes-playlist -f bestvideo+bestaudio &lt;url&gt;
-</code></pre><p>但是，下载速度非常的慢，只有100kb~00kb之间，而且经常断连，我以为是我的VPS出了问题。</p>
-<p>第四步，所以周六<del>早晨</del>（早晨怎么起的来，是中午）上网搜索解决办法。原来youtube-dl解析后，可以用aria2来下载，但是我按着网上的方法来试用了一下，不行。</p>
-<pre><code>youtube-dl &lt;url&gt; --external-downloader aria2c --external-downloader-args &quot;-x 16&quot;
-</code></pre><p>第五步，我就想到ssh到VPS，在VPS里面执行命令下载。所以就开始折腾了：</p>
-<ul>
-<li>安装youtube-dl（先安装pip、再用pip安装youtube-dl）</li>
-<li>安装ffmpeg（折腾好久）</li>
-<li>安装aria2</li>
-</ul>
-<p>安装aria2最麻烦，用yum安装不是最新版的，连接HTTPS有问题，这里就开始死循环了。由于连接不了HTTPS，所以aria2肯定下载不了youtube视频；我怀疑是aria2的版本太低了，我本机上的aria2可以下载HTTPS的资源。所以我就开始找如何编译aria2的源码，果然以失败告终，因为缺少依赖的包。</p>
-<p>第六步，放弃使用aria2，直接使用youtube-dl下载吧，没想到速度很快的，5～6分钟左右就下载好了27个视频。</p>
-<p>第七步，开始搜索如何从VPS上取回文件到本机。可以使用Caddy+插件，或者使用nginx+autoindex。最终选择了后者，开始安装nginx，这里没有什么问题，然后开始配置nginx，设置autoindex、autoindex_localtime、autoindex_exact_size。设置好了之后重启nginx，这里太坑了，我设置好了之后根本不知道干什么，网上的教程实在是不专业。</p>
-<p>这里是重点，当你设置好autoindex之后，访问VPS地址是访问的这个位置<code>/usr/share/nginx/html</code>，所以你在这个文件夹下新建文件夹，比如说download，然后你才可以访问<a href="http://ip/download，就可以取回文件了。" target="_blank" rel="noopener">http://ip/download，就可以取回文件了。</a></p>
-<pre><code>/etc/ngin    x/nginx.conf   
-/etc/init.d/nginx start
-/etc/init.d/nginx restart
-ps -ef | grep nginx
-</code></pre><p>第八步，使用Motrix下载文件的链接，也是aria2套壳的，可以多线程下载，基本就可以达到本机物理带宽的最大值。</p>
-<p> <em>下载完之后，就和roommate去吃饭了，我吃了肯德基，没有嫩牛五方，只吃了老北京鸡肉卷，感觉没吃饱；他本想吃鸭血粉丝，但是人家关门了，哈哈哈。我就说去吃海底捞吧，✊✂️布输给我之后，我们就去吃了，本来说要排1个小时的，但是10分钟就好了，下了几盘五子棋。回来后，喂了苑里的猫，就12点了。</em></p>
-<p>第九步，继续折腾aria2，折腾了好久没有结果，这次真的是放弃了。</p>
-<p>第十步，开始搭建aria2+ariang+h5ai，也是白天搜索的时候偶然看见的。觉得很有意思，相当于百度网盘了。这里有人直接打包好了，按着做就行了，<a href="https://doc.xiaoz.me/#/ccaa/install" target="_blank" rel="noopener">🔗</a>。</p>
-<p>第十一步，还是下载https不行，因为也是调用aria2，有开始折腾折腾。之后莫名其妙就好了。我的配置文件如下：</p>
-<pre><code>ca-certificate=/etc/pki/tls/certs/ca-bundle.crt
-check-certificate=false
-</code></pre><p>把aria2的进程杀掉，运行</p>
-<pre><code>ps -ef|grep aira2c //查看aria2c进程
-aria2c --conf-path=&quot;/link/to/aria2.conf&quot; -D
-</code></pre><p>第十二步，测试下载bt，一开始不太行，没速度，挂了一会儿之后就有速度了。但是下载一半失败了，因为VPS存储空间没了，到/tmp下删除所有东西，就又回来了。又测试了一下在线播放，没有问题，就是加载有点慢可以接受吧。</p>
-<pre><code>df -hl // 查看存储容量
-</code></pre><h2 id="三、前景"><a href="#三、前景" class="headerlink" title="三、前景"></a>三、前景</h2><p>VPS的容量太低了，可能要挂载外部的网盘，如Google Drive和OneDrive等，不知道他们的无限容量是怎么搞的。</p>
-<h2 id="四、一些教程"><a href="#四、一些教程" class="headerlink" title="四、一些教程"></a>四、一些教程</h2><pre><code>https://502435.com/archives/250/
-https://darknesschaser.github.io/2018/04/12/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA%E7%A7%81%E6%9C%89%E7%BD%91%E7%9B%98-Caddy+AriaNG+Aria2%E9%85%8D%E7%BD%AEHTTPS%E7%A6%BB%E7%BA%BF%E4%B8%8B%E8%BD%BD%E7%BD%91%E7%9B%98/
-</code></pre>
-          
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/折腾VPS的一天.html">折腾VPS的一天</a>
+            
+        </h1>
+        <div class="content">
+            <p>上个星期刚刚在vultr上买了一台VPS主机，配置如下</p>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Location: New Jersey</span><br><span class="line">CPU: 1vCore</span><br><span class="line">RAM: 512MB</span><br><span class="line">Storage: 10GB SSD</span><br><span class="line">Bandwidth: 500GB</span><br><span class="line">OS: CentOS 6 x64</span><br><span class="line">Price: $3.5/mo</span><br></pre></td></tr></table></figure>
+        </div>
         
-      
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/posts/折腾VPS的一天.html#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
     </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
     
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/who.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
+    <div class="card-content article ">
         
-        
-          <h1 class="post-title" itemprop="name headline">
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-04-09T12:53:05.000Z">2019-04-09</time>
                 
-                <a class="post-title-link" href="/posts/who.html" itemprop="url">Who am I</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-04-09T20:53:05+08:00">
-                2019-04-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a few seconds read (About 7 words)
+                </span>
+                
+                
+            </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
         
-          
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/who.html">Who am I</a>
+            
+        </h1>
+        <div class="content">
             <p>2019.4 ~ 至今：考研难民</p>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/cat.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/posts/cat.html" itemprop="url">菊苑的猫</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-29T16:10:18+08:00">
-                2019-03-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
         
-          
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-29T08:10:18.000Z">2019-03-29</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    3 minutes read (About 386 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/cat.html">菊苑的猫</a>
+            
+        </h1>
+        <div class="content">
             <h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><p>今天是考研复试后的第一天，正好是星期五。前一天就计划好要来三牌楼继续听褚老师的课。坐了D1来到司马巷下车，跟着别人走几步就到了学校。一进门是</p>
 <h2 id="Chapter-X"><a href="#Chapter-X" class="headerlink" title="Chapter X"></a>Chapter X</h2><h3 id="3月31日"><a href="#3月31日" class="headerlink" title="3月31日"></a>3月31日</h3><p>早上六点钟，猫就来宿舍叫了，应该是饿了，喂了一根火腿肠；喂完后刚上床，她又来了，我表示很诧异，又喂了半根。  </p>
 <p>下午去苏果超市，买了一些猫粮：  </p>
@@ -663,125 +262,45 @@ https://darknesschaser.github.io/2018/04/12/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA
 <p>不知道今晚还来不来了😂  </p>
 <p>Last but not least， 猫其实不能喝牛奶，真是罪过了，喂了好几次了。</p>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/9-图书馆吵架.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/posts/9-图书馆吵架.html" itemprop="url">图书馆吵架</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-14T10:15:32+08:00">
-                2019-03-14
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
         
-          
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-14T02:15:32.000Z">2019-03-14</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    5 minutes read (About 681 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/9-图书馆吵架.html">图书馆吵架</a>
+            
+        </h1>
+        <div class="content">
             <h2 id="背景分析"><a href="#背景分析" class="headerlink" title="背景分析"></a>背景分析</h2><p>图书馆8:00开门，但是这是不准确的，会提前15分钟左右，工作人员需要开灯，需要开空调，也会提前上班。</p>
 <p>我理想中的位置，位于5楼的一个座位。这个座位只坐过一次，时间是去年放寒假之前，在这里看了Competitive Programmer’s Handbook. </p>
 <p>今天3月14日，已经开学3周。我还需要准备复试，准备考试。今天是星期四，来图书馆四次。周一中午毕设导师要开会，下午来到图书馆，查了一些复试的资料；周二全天都在图书馆，选了另一边一个馆的位置，进门一直往前走的地方，我到的时候已经是8:26分了，当然有插头的地方都有了人，但是我带了插线板，让别人先把插头拔下，然后插上插线板，这样就解决了，这天是愉快的一天；周三，同样的时间，我去了同样的位置，那个地方坐了同样的人，可是她自己带了一个插线板放在了桌子上。心想：好，我明白了，这是摆明了让我滚蛋的意思，我下次再也不来了。</p>
@@ -791,917 +310,380 @@ https://darknesschaser.github.io/2018/04/12/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA
 <p>8:30的时候，他们来了。一看我就认出是昨天坐在这儿的人。我认为他就应该坐下来学习就行了，结果非要找我理论，让我和他换位置。我当时觉得这个逻辑很奇怪，总觉得哪里不对，便不让，要求找负责人评评理。</p>
 <p>后来我们就下楼，找2楼的阿姨评理；评到最后，阿姨竟然说我摞别认书不对，我非常不开心，眼睛里饱含泪水，让她找领导过来。过了一会儿，</p>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/设备.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/posts/设备.html" itemprop="url">设备</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-08T22:06:38+08:00">
-                2019-03-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>个人设备一览，价格为购买时的价格，根据一般的价格规律，商品的价格会随时间而下降。</p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/设备.html#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/UML复习.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/posts/UML复习.html" itemprop="url">UML复习</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-12T00:00:00+08:00">
-                2018-06-12
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <blockquote class="blockquote-center">My heart is in the work.</blockquote>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/UML复习.html#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/J2EE.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/posts/J2EE.html" itemprop="url">J2EE复习</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-06-08T00:00:00+08:00">
-                2018-06-08
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          《JavaEE servlet and JSP》 复习笔记
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/J2EE.html">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/weibo.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/posts/weibo.html" itemprop="url">weibo脚本</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-05-29T15:18:08+08:00">
-                2018-05-29
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          我好变态[doge]，竟然去下载别人的照片😍
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/weibo.html">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/tar惨案.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/posts/tar惨案.html" itemprop="url">tar惨案</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-27T21:04:27+08:00">
-                2018-04-27
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <p>如何将一个tar文档解压到指定的目录<br>how to use tar to extract file into the specific directory<br>无论是百度还是谷歌，我都懒得打，酿成了一场悲剧。  </p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/tar惨案.html#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/posts/15213-Week2-1.html">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Jinsong Xu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/morty.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/posts/15213-Week2-1.html" itemprop="url">Linux Boot Camp</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-          
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-04-18T11:47:09+08:00">
-                2018-04-18
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          CMU 15~213第二周笔记
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/posts/15213-Week2-1.html">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
-
-          </div>
-          
-
-
-          
-
         </div>
         
-          
-  
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+        
+        
     </div>
-  </div>
+</div>
 
-  <aside id="sidebar" class="sidebar">
+
+
+
+
+
+
+
+    <div class="card">
     
-    <div class="sidebar-inner">
-
-      
-
-      
-
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
-        <div class="site-overview">
-          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-            
-              <img class="site-author-image" itemprop="image"
-                src="/uploads/morty.jpg"
-                alt="Jinsong Xu" />
-            
-              <p class="site-author-name" itemprop="name">Jinsong Xu</p>
-              <p class="site-description motion-element" itemprop="description"></p>
-          </div>
-
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
-              
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">12</span>
-                  <span class="site-state-item-name">posts</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
-                <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
-                  <span class="site-state-item-name">tags</span>
-                </a>
-              </div>
-            
-
-          </nav>
-
-          
-
-          
-            <div class="links-of-author motion-element">
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2019-03-08T14:06:38.000Z">2019-03-08</time>
                 
-                  <span class="links-of-author-item">
-                    <a href="https://github.com/xjs-js" target="_blank" title="GitHub">
-                      
-                        <i class="fa fa-fw fa-github"></i>GitHub</a>
-                  </span>
                 
-                  <span class="links-of-author-item">
-                    <a href="https://www.facebook.com/people/许劲松/100009456007598" target="_blank" title="Facebook">
-                      
-                        <i class="fa fa-fw fa-facebook"></i>Facebook</a>
-                  </span>
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 134 words)
+                </span>
+                
                 
             </div>
-          
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/设备.html">设备</a>
+            
+        </h1>
+        <div class="content">
+            <p>个人设备一览，价格为购买时的价格，根据一般的价格规律，商品的价格会随时间而下降。</p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/posts/设备.html#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
 
-          
-          
 
-          
-          
 
-          
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-06-11T16:00:00.000Z">2018-06-12</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    7 minutes read (About 1063 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/UML复习.html">UML复习</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote class="blockquote-center">My heart is in the work.</blockquote>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/posts/UML复习.html#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-06-07T16:00:00.000Z">2018-06-08</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    11 minutes read (About 1681 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/J2EE.html">J2EE复习</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote class="blockquote-center">爱就像蓝天白云，晴空万里</blockquote>
+
+
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100" height="86" src="//music.163.com/outchain/player?type=2&id=28240138&auto=0&height=66"></iframe>
+
+
+<h1 id="复习提纲"><a href="#复习提纲" class="headerlink" title="复习提纲"></a>复习提纲</h1><h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><p>大不了我全都写:<br>Servlet, ServletConfig, ServletContext, ServletRequest, ServletResponse, GenericServlet, HttpServlet, HttpServletRequest, HttpServletResponse, HttpSession </p>
+<ol>
+<li><p>处理 servlet life cycle events 的接口或类都有哪些?<br>ServletRequest, ServletContext, HttpSession</p>
+</li>
+<li><p>javax.servlet中都有哪些类？接口？<br>Servlet, ServletConfig, ServletContext, GenericServlet, HttpServlet, ServletRequest, ServletResponse, HttpServletRequest, HttpServletResponse</p>
+</li>
+<li><p>Servlet子类都有哪些？Servlet是做什么用的？运行在服务器端还是客户端？<br>GenericServlet, HttpServet. Servlet is a server-side program written in java that dynamically extends the functionality of an application server.  </p>
+</li>
+<li><p>Servlet通过哪个类可以取得初始化参数？<br>ServletContext. getInitParameter()  </p>
+</li>
+</ol>
+<ol start="5">
+<li>HttpServlet类中都有些什么方法, 有何不同?<br>init(), service(), destroy(), doGet(), doPost(), doPut(), doHead()<br><em>doGet</em> method handles the request using HTTP GET method and is commonly used to retrieve static resources.<br><em>doPost</em> method handles the request using HTTP POST. When you enter registration data in a HTML form, the data can be sent using the HTTP POST method. The data is sent as part of the request body.<br><em>doHead</em> method handles the request using HTTP HEAD method. It is similar to the doGet method, sends the request to the server. But it only returns the header of the response.<br><em>doPut</em> method handles the request using HTTP PUT method. It allows the client to store information on the server. </li>
+</ol>
+<ol start="6">
+<li>ServletContext是做什么用的？都包含哪些方法？怎么取里面的信息？<br>a. ServletContext provides information to the servlets regarding the environment in which they are running. We can use ServletContext to find the path information of other files of the web application, access to other servlets of the web application and log the messages to the application server log file.<br>b. setAttribute(), getAttribute(), getAttributeNames(), getInitParameter(), getInitParameterNames().</li>
+</ol>
+<ol start="7">
+<li>捕捉 Servlet 生命周期的各种事件 都需要用到哪些监听器？init() 在生命周期中运行几次？<br>servlet request listener, servlet context listener, HTTP session listener. init() runs only once in the life cycle.</li>
+</ol>
+<ol start="8">
+<li><p>http是什么？有什么特点？能否存储状态？<br>a. HTTP is short for HyperText Transfer Protocal. It is an application-level protocal. It is used to deliver data on the world wide web.<br>b. simple but powerful, connectionless, stateless, media independent<br>c. No</p>
+</li>
+<li><p>HTTP POST、HTTP GET方法有什么区别?<br>GET: Data is passed as query string appended to the URL.<br>POST: Data is passed as part of the request body.  </p>
+</li>
+<li><p><session-timeout> 干什么用的? 填什么? 意思是什么?<br>specify the time after which the servlet will expire.<br>Integer, minutes.</session-timeout></p>
+</li>
+</ol>
+<h2 id="Chapter-2-Manage-Sessions-and-Handle-Errors-amp-Work-with-Filters-Request-Dispatcher-and-Servlet-Threads"><a href="#Chapter-2-Manage-Sessions-and-Handle-Errors-amp-Work-with-Filters-Request-Dispatcher-and-Servlet-Threads" class="headerlink" title="Chapter 2 Manage Sessions and Handle Errors &amp; Work with Filters, Request Dispatcher and Servlet Threads"></a>Chapter 2 Manage Sessions and Handle Errors &amp; Work with Filters, Request Dispatcher and Servlet Threads</h2><ol>
+<li>J2EE 有几种 线程模式？各是什么？SingleThreadModel是什么有何用?<br>multi-threading model(default), single-threading model<br>SingleThreadModel is a interface that helps the web container creates a pool of servlet instance and assigns one instance per request. Implementing this interface ensures that only a single thread will excute inside the service() method.  </li>
+</ol>
+<ol start="2">
+<li>RequestDispatcher做什么用的？<br>RequestDispatcher allows inter-servlet communication. You can use it to forwoad the request to another resource that can be a static HTML page or a servlet. You can also use it to include the contents of another resource in your servlet.</li>
+</ol>
+<ol start="3">
+<li><p>Hidden Form Field是什么？如何达成功能？<br>By using Hidden Form Field, we can store information about the user activities across web pages.<br><code>&lt;input type=&quot;hidden&quot; ... &gt;</code></p>
+</li>
+<li><p>J2EE的会话管理技术有哪些？谁是默认的会话管理方式? Session对象能否在几个Web应用程序间共享？<br>Hidden form fields, URL Rewriting, Cookies, Servlet session API  </p>
+</li>
+</ol>
+<h2 id="Chapter-3-JSP-amp-JavaBeans-and-Custom-Tags"><a href="#Chapter-3-JSP-amp-JavaBeans-and-Custom-Tags" class="headerlink" title="Chapter 3 JSP &amp; JavaBeans and Custom Tags"></a>Chapter 3 JSP &amp; JavaBeans and Custom Tags</h2><ul>
+<li><p>JSP是什么，怎么运行的? 和Servlet有何关系? 有哪些优缺点？JSP core tag 是什么意思? (简答题)<br>JavaServer Pages(JSP) is a technology that helps us creat dynamically generated web pages based on HTML, XML or other document types. Similar to Active Server Pages(ASP) of Microsoft.<br>To deploy and run JavaServerPages, a compatible web server with a servlet container such as Apache Tomcat, is required. When the client browser requests for a particular JSP page, the server, in turn, sends the request to a JSP engine. JSP engine is a part of the web container that compiles a JSP page to a servlet.<br>Architecturally, JSP may be viewed as a high-level abstraction of Java Servlets. JSP pages are translated into servlets at runtime.    </p>
+<p>Advantages:<br> JSP allows java to be embedded directly into an HTML page by using special tags. The HTML content and java content can also be placed in seperate files. Any changes made to the html content is automaticallu compiled and loaded onto the server.<br>A JSP page, by virtue of separate placement of the static and dynamic content, facilitates both web developer and web designer to work indepently.      </p>
+<p>Disadvantages:<br>complex, consuming memory</p>
+</li>
+</ul>
+<ul>
+<li>JSP语法 </li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;% Java code %&gt;</span><br><span class="line">&lt;%= expression %&gt;</span><br><span class="line">&lt;%! declarations %&gt;</span><br><span class="line">&lt;%-- comments --%&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>JSP consists of four components. What are they?  </li>
+</ul>
+<figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">JSP directives - [page, taglib, include]</span><br><span class="line">page: &lt;%@ page language=&quot;java&quot;  %&gt;</span><br><span class="line">taglib: </span><br><span class="line">include: &lt;%@ include file=&quot;xxx.html&quot; %&gt;</span><br><span class="line"></span><br><span class="line">JSP scripting - embed Java code directly into an HTML page</span><br><span class="line"></span><br><span class="line">JSP implict objects</span><br><span class="line">-[request, response, config, pageContext, out, session, page, application, exception]</span><br><span class="line"></span><br><span class="line">JSP actions </span><br><span class="line">&lt;jsp:useBeans&gt;</span><br><span class="line">&lt;jsp:include&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>JSP有哪些隐含可用的对象?<br>application, exception, request, response, out, config, pageContext, page, session</li>
+</ul>
+<ul>
+<li>JSP Action是什么？做什么用的？<br>JSP Action is a component of a JSP page. JSP Actions are used to perform tasks such as inserting files, reusing beans, forward a   user to another page and instantiating objects. We can use JSP Action is such a way: <code>&lt;jsp:attribute&gt;</code></li>
+</ul>
+<h2 id="Chapter-4-Custom-Tags-amp-Secure-web-applications"><a href="#Chapter-4-Custom-Tags-amp-Secure-web-applications" class="headerlink" title="Chapter 4: Custom Tags &amp; Secure web applications"></a>Chapter 4: Custom Tags &amp; Secure web applications</h2><ol>
+<li>J2EE采用的安全机制有哪4个? 之间的区别是什么？<br><em>Authentication</em>: the process of identifying a user.<br><em>Authorization</em>: specifies the rights assigned to an authenticated user to access resources of a web application.<br><em>Data Integrity</em>: ensures that data is not modified while being transferred between the server and the client.<br><em>Auditing</em>: maintain a record of the rights assigned to different types of web users.</li>
+</ol>
+<h2 id="Chapter-5-Introducing-Design-Patterns-and-JNDI-API"><a href="#Chapter-5-Introducing-Design-Patterns-and-JNDI-API" class="headerlink" title="Chapter 5: Introducing Design Patterns and JNDI API"></a>Chapter 5: Introducing Design Patterns and JNDI API</h2><ol>
+<li><p>JNDI命名、目录服务中事件相关的类在哪一个package中？<br>javax.naming</p>
+</li>
+<li><p>JNDI是什么? DataSource起什么作用, 与JNDI有什么关系？JDBC是什么？JNDI与JDBC有什么关系？<br>Java Naming and Directory Interface(JNDI) is an API that provides naming and directory services to Java applications. JNDI also provides information about the applications, naming service, networks, and end-users.<br>DataSource is a resource that contains the information needed to connect to an underlying database. We can use JNDI to bind the DataSource. </p>
+</li>
+<li><p>J2EE 的设计模式有哪些？<br>A: Modle View Control(MVC), Bussiness Delegate, Data Access Object</p>
+</li>
+<li><p>什么是MVC? Web开发中的Boundary, Service, Entity 组件各指什么？什么是DAO？作用是什么？<br>MVC is a design pattern that seperates the bussiness logic code, data access code and data presentation code.<br>Boundary: views and controller<br>Entity: real world business objects<br>Service components provide functional service to the boundary components for manipulating entities.<br>DAO is a design pattern that seperates object persistence and data access logic from the bussiness logic or persistence mechanism API. This design pattern enables you to change the data access code at any point in time without modifying the application code.   </p>
+</li>
+<li><p>J2EE编程中的request和response是干什么用的？从 http request stream中能得到哪些信息？http 如何从request中存取信息？存在其中的信息与其他类型如ServletContex中的信息的 scope 有何区别？<br>Request object is used to represent the request information being sent by an HTTP client,support for retrieving request parameters and accessing HTTP request header information.<br>Response object provides methods to handle response,status codes, and response headers of the servlets that communicate using HTTP.<br>HTTP request parameter, HTTP request header information</p>
+</li>
+<li><p>J2EE编程里都有哪些scope可以用来存储信息？<br>page, request, session, application</p>
+</li>
+</ol>
+<h2 id="编程能力"><a href="#编程能力" class="headerlink" title="编程能力"></a>编程能力</h2><ul>
+<li>在Servlet里如何得到HTML表单里的参数？如何通过request来存取及传递信息; error page如何使用？   </li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">myServlet</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">HttpServlet</span> </span>&#123;</span><br><span class="line">    ServletContex ctx;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">init</span><span class="hljs-params">(ServletConfig config)</span> </span>&#123;</span><br><span class="line">        ctx = config.getServletContext();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">doPost</span><span class="hljs-params">(HttpServletRequest request, HttpServletResponse response)</span> </span>&#123;</span><br><span class="line">        <span class="hljs-keyword">try</span> &#123;</span><br><span class="line">            string name = request.getParameter(<span class="hljs-string">"name"</span>);</span><br><span class="line">            <span class="hljs-keyword">int</span> age = Integer.parseInt(request.getParameter(<span class="hljs-string">"age"</span>));</span><br><span class="line">        &#125; <span class="hljs-keyword">catch</span> (Exception ce) &#123;</span><br><span class="line">            request.setAttribute(<span class="hljs-string">"Exception"</span>, ce);</span><br><span class="line">            RequestDispatcher ds = ctx.getRequestDispatcher(<span class="hljs-string">"/errorpage"</span>);</span><br><span class="line">            ds.forword(request, response);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如何利用 HttpSessionListener 捕捉一个会话的开始?如何得到当前的系统时间? 如何记录日志？</li>
+</ul>
+<figure class="highlight java hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">mySessionListener</span> <span class="hljs-keyword">implements</span> <span class="hljs-title">ServletContextListener</span>, <span class="hljs-title">HttpSessionListener</span></span></span><br><span class="line"><span class="hljs-class"></span>&#123;</span><br><span class="line">    ServletContext ctx;</span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">contextInitialized</span><span class="hljs-params">(ServletContextEvent sce)</span> </span>&#123;</span><br><span class="line">        ctx = sce.getServletContext();</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="hljs-function"><span class="hljs-keyword">public</span> <span class="hljs-title">sessionInitialized</span><span class="hljs-params">(HttpSessionEvent hse)</span> </span>&#123;</span><br><span class="line">        ctx.log(<span class="hljs-string">"session started at "</span> + <span class="hljs-keyword">new</span> Data());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
-      </section>
-
-      
-
-      
-
-    </div>
-  </aside>
-
-
         
-      </div>
-    </main>
+        
+        
+    </div>
+</div>
 
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright">&copy; 2018 &mdash; <span itemprop="copyrightYear">2019</span>
-  <span class="with-love">
-    <i class="fa fa-user"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Jinsong Xu</span>
 
-  
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-05-29T07:18:08.000Z">2018-05-29</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a few seconds read (About 108 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/weibo.html">weibo脚本</a>
+            
+        </h1>
+        <div class="content">
+            <blockquote class="blockquote-center">当浮一大白</blockquote>
+
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>进入她的微博，点击“她的相册”；这时页面已经加载了一些代码，如果需要全部的照片，需要自己一直往下滑动，直到底部。  </p>
+<p>按下F12，打开开发者控制台，粘贴Javascript代码；执行。</p>
+<p><img src="/posts/weibo/1.jpg" alt="图1"></p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="/posts/weibo/2.jpg" alt="图2"></p>
+<h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><p><a href="https://github.com/xjs-js/Tools/blob/master/weibo.js" target="_blank" rel="noopener">github🔗</a></p>
+
+        </div>
+        
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-04-27T13:04:27.000Z">2018-04-27</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    a minute read (About 221 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/tar惨案.html">tar惨案</a>
+            
+        </h1>
+        <div class="content">
+            <p>如何将一个tar文档解压到指定的目录<br>how to use tar to extract file into the specific directory<br>无论是百度还是谷歌，我都懒得打，酿成了一场悲剧。  </p>
+        </div>
+        
+        
+        <div class="level is-mobile">
+            <div class="level-start">
+                <div class="level-item">
+                <a class="button is-size-7 is-light" href="/posts/tar惨案.html#more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+</div>
+
+
+
+
+
+
+
+
+    <div class="card">
+    
+    <div class="card-content article ">
+        
+        <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
+            <div class="level-left">
+                <time class="level-item has-text-grey" datetime="2018-04-18T03:47:09.000Z">2018-04-18</time>
+                
+                
+                <span class="level-item has-text-grey">
+                    
+                    
+                    2 minutes read (About 263 words)
+                </span>
+                
+                
+            </div>
+        </div>
+        
+        <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+            
+                <a class="has-link-black-ter" href="/posts/15213-Week2-1.html">Linux Boot Camp</a>
+            
+        </h1>
+        <div class="content">
+            <p><blockquote class="blockquote-center">My Heart is in the Work.</blockquote></p>
+<h1 id="Github-Shortcuts"><a href="#Github-Shortcuts" class="headerlink" title="Github Shortcuts"></a>Github Shortcuts</h1><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-comment">### 初始配置 ###</span></span><br><span class="line">git config --global user.name <span class="hljs-string">"---"</span></span><br><span class="line">git config --global user.email <span class="hljs-string">"----@----"</span></span><br><span class="line"><span class="hljs-comment">### 常用命令 ###</span></span><br><span class="line">git init                        <span class="hljs-comment"># 创建初始仓库</span></span><br><span class="line">git add *                       <span class="hljs-comment"># 增加所有文件 </span></span><br><span class="line">git add &lt;file_name&gt;             <span class="hljs-comment"># 增加指定文件 </span></span><br><span class="line">git add <span class="hljs-string">"*.txt"</span>                 <span class="hljs-comment"># 增加所有txt文件</span></span><br><span class="line">git commit -m <span class="hljs-string">"commit mesage"</span>   <span class="hljs-comment"># commit</span></span><br><span class="line">git <span class="hljs-built_in">log</span>                         <span class="hljs-comment"># 显示日志</span></span><br><span class="line">git <span class="hljs-built_in">log</span> --pretty=oneline</span><br><span class="line">git remote add &lt;remote_name&gt; &lt;remote_repo_url&gt;</span><br><span class="line">git push -u origin master       <span class="hljs-comment"># -u告诉git记住后面的参数“origin master”,下次直接git push</span></span><br><span class="line">git pull origin master</span><br><span class="line">git diff HEAD</span><br><span class="line">git reset &lt;target&gt;</span><br><span class="line">git checkout &lt;target&gt;           <span class="hljs-comment"># 跳转到target，target可以是branch，也可以是commit的代码</span></span><br><span class="line">git branch &lt;branch_name&gt;        <span class="hljs-comment"># 创建新的分支</span></span><br><span class="line">git branch -d &lt;branch_name&gt;     <span class="hljs-comment"># 删除分支</span></span><br><span class="line">git checkout &lt;branch_name&gt;      <span class="hljs-comment"># 切换到分支</span></span><br><span class="line">git merge &lt;branch_name&gt;         <span class="hljs-comment"># 在master分支，合并其他分支；先使用git checkout master</span></span><br><span class="line">git rm <span class="hljs-string">"*.txt"</span></span><br><span class="line"><span class="hljs-comment">### revert ### </span></span><br><span class="line">git revert HEAD</span><br><span class="line">git reset --hard HEAD~1</span><br></pre></td></tr></table></figure>
+<h1 id="Terminal-Shortcuts"><a href="#Terminal-Shortcuts" class="headerlink" title="Terminal Shortcuts"></a>Terminal Shortcuts</h1><p>Ctrl + A : 跳到行首<br>Ctrl + E : 跳到行尾<br>Ctrl + U : 清楚当前行<br>Ctrl + C : kill当前进程<br>Ctrl + L : == clear命令  </p>
+<h1 id="Something-Fun"><a href="#Something-Fun" class="headerlink" title="Something Fun"></a>Something Fun</h1><figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">vimtutor        <span class="hljs-comment"># vim教程</span></span><br><span class="line">ls | grep foo   <span class="hljs-comment"># 查找当前目录下的文件</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><a href="https://try.github.io/levels/1/challenges/1" target="_blank" rel="noopener">Github交互教程</a><br><a href="https://www.atlassian.comgit/tutorials" target="_blank" rel="noopener">Github详细教程</a>  </p>
+</blockquote>
+
+        </div>
+        
+        
+        
+    </div>
 </div>
 
 
@@ -1712,487 +694,501 @@ https://darknesschaser.github.io/2018/04/12/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BA
 
 
 
+    
+<div class="card card-transparent">
+    <nav class="pagination is-centered" role="navigation" aria-label="pagination">
+        <div class="pagination-previous is-invisible is-hidden-mobile">
+            <a class="is-flex-grow has-text-black-ter" href="/page/0/">Previous</a>
+        </div>
+        <div class="pagination-next">
+            <a class="is-flex-grow has-text-black-ter" href="/page/2/">Next</a>
+        </div>
+        <ul class="pagination-list is-hidden-mobile">
+            
+            <li><a class="pagination-link is-current" href="/">1</a></li>
+            
+            <li><a class="pagination-link has-text-black-ter" href="/page/2/">2</a></li>
+            
+        </ul>
+    </nav>
+</div>
+</div>
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen  has-order-1 column-left ">
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    
+                        <img class="image is-128x128 has-mb-6" src="/uploads/morty.jpg" alt="Xu, Jinsong">
+                    
+                    
+                    <p class="is-size-4 is-block">
+                        Xu, Jinsong
+                    </p>
+                    
+                    
+                    
+                    <p class="is-size-6 is-flex is-flex-center has-text-grey">
+                        <i class="fas fa-map-marker-alt has-mr-7"></i>
+                        <span>China</span>
+                    </p>
+                    
+                </div>
+            </div>
+        </nav>
+        <nav class="level is-mobile">
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Posts
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        12
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Categories
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        0
+                    </p>
+                </div>
+            </div>
+            <div class="level-item has-text-centered is-marginless">
+                <div>
+                    <p class="heading">
+                        Tags
+                    </p>
+                    <p class="title has-text-weight-normal">
+                        6
+                    </p>
+                </div>
+            </div>
+        </nav>
+        <div class="level">
+            <a class="level-item button is-link is-rounded" href="https://github.com/xjs-js" target="_blank">
+                Follow</a>
+        </div>
+        
+        
+    </div>
+</div>
+    
         
 
-
-
-
-
-
-
+<div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Links
+        </h3>
+        <ul class="menu-list">
         
-      </div>
-    </footer>
-
-    
-      <div class="back-to-top">
-        <i class="fa fa-arrow-up"></i>
+            <li>
+                <a class="level is-mobile" href="http://www.keithschwarz.com/" target="_blank">
+                    <span class="level-left">
+                        <span class="level-item">Keith Schwarz</span>
+                    </span>
+                    <span class="level-right">
+                        <span class="level-item tag">www.keithschwarz.com</span>
+                    </span>
+                </a>
+            </li>
         
-      </div>
+        </ul>
+        </div>
+    </div>
+</div>
+
+
+    
+        
+<div class="card widget">
+    <div class="card-content">
+        <h3 class="menu-label">
+            Tag Cloud
+        </h3>
+        <a href="/tags/15213/" style="font-size: 10px;">15213</a> <a href="/tags/JavaScript/" style="font-size: 10px;">JavaScript</a> <a href="/tags/LIFE/" style="font-size: 20px;">LIFE</a> <a href="/tags/NOJ/" style="font-size: 10px;">NOJ</a> <a href="/tags/VPS/" style="font-size: 10px;">VPS</a> <a href="/tags/unix/" style="font-size: 10px;">unix</a>
+    </div>
+</div>
+
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                Tags
+            </h3>
+            <div class="field is-grouped is-grouped-multiline">
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/15213/">
+                        <span class="tag">15213</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/JavaScript/">
+                        <span class="tag">JavaScript</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/LIFE/">
+                        <span class="tag">LIFE</span>
+                        <span class="tag is-grey">3</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/NOJ/">
+                        <span class="tag">NOJ</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/VPS/">
+                        <span class="tag">VPS</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+                <div class="control">
+                    <a class="tags has-addons" href="/tags/unix/">
+                        <span class="tag">unix</span>
+                        <span class="tag is-grey">1</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+        <div class="column-right-shadow is-hidden-widescreen ">
+        
+            
+        
+            <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+        
+        </div>
+    
+</div>
+
+                
+
+
+
+
+<div class="column is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only has-order-3 column-right ">
+    
+        
+    
+        <div class="card widget">
+    <div class="card-content">
+        <div class="menu">
+        <h3 class="menu-label">
+            Archives
+        </h3>
+        <ul class="menu-list">
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2019/03/">
+                <span class="level-start">
+                    <span class="level-item">March 2019</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">3</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/06/">
+                <span class="level-start">
+                    <span class="level-item">June 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">2</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/05/">
+                <span class="level-start">
+                    <span class="level-item">May 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">1</span>
+                </span>
+            </a>
+        </li>
+        
+        <li>
+            <a class="level is-marginless" href="/archives/2018/04/">
+                <span class="level-start">
+                    <span class="level-item">April 2018</span>
+                </span>
+                <span class="level-end">
+                    <span class="level-item tag">4</span>
+                </span>
+            </a>
+        </li>
+        
+        </ul>
+        </div>
+    </div>
+</div>
+    
+    
+</div>
+
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+    <div class="container">
+        <div class="level">
+            <div class="level-start has-text-centered-mobile">
+                <a class="footer-logo is-block has-mb-6" href="/">
+                
+                    <img src="/images/logo.svg" alt="Blog" height="28">
+                
+                </a>
+                <p class="is-size-7">
+                &copy; 2019 Jinsong Xu&nbsp;
+                Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & <a
+                        href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank">Icarus</a>
+                
+                </p>
+            </div>
+            <div class="level-end">
+            
+            </div>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script>
+<script>moment.locale("en");</script>
+
+
+    
+    
+    
+    <script src="/js/animation.js"></script>
     
 
     
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/lightgallery@1.6.8/dist/js/lightgallery.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.7.0/dist/js/jquery.justifiedGallery.min.js" defer></script>
+    <script src="/js/gallery.js" defer></script>
+    
 
-  </div>
+    
+    
 
-  
-
-<script type="text/javascript">
-  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
-    window.Promise = null;
-  }
+<div id="outdated">
+    <h6>Your browser is out-of-date!</h6>
+    <p>Update your browser to view this website correctly. <a id="btnUpdateBrowser" href="http://outdatedbrowser.com/">Update
+            my browser now </a></p>
+    <p class="last"><a href="#" id="btnCloseUpdateBrowser" title="Close">&times;</a></p>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/outdatedbrowser@1.1.5/outdatedbrowser/outdatedbrowser.min.js" defer></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        outdatedBrowser({
+            bgColor: '#f25648',
+            color: '#ffffff',
+            lowerThan: 'flex'
+        });
+    });
 </script>
 
 
-
-
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
-
-  
-
-
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
-
-
-
-  
-  
-
-
-  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
-
-  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
-
-
-
-  
-
-  
-
-
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
-
-
-
-  
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
-  <script type="text/javascript">
-    // Popup Window;
-    var isfetched = false;
-    var isXml = true;
-    // Search DB path;
-    var search_path = "search.xml";
-    if (search_path.length === 0) {
-      search_path = "search.xml";
-    } else if (/json$/i.test(search_path)) {
-      isXml = false;
-    }
-    var path = "/" + search_path;
-    // monitor main search box;
-
-    var onPopupClose = function (e) {
-      $('.popup').hide();
-      $('#local-search-input').val('');
-      $('.search-result-list').remove();
-      $('#no-result').remove();
-      $(".local-search-pop-overlay").remove();
-      $('body').css('overflow', '');
-    }
-
-    function proceedsearch() {
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
-        .css('overflow', 'hidden');
-      $('.search-popup-overlay').click(onPopupClose);
-      $('.popup').toggle();
-      var $localSearchInput = $('#local-search-input');
-      $localSearchInput.attr("autocapitalize", "none");
-      $localSearchInput.attr("autocorrect", "off");
-      $localSearchInput.focus();
-    }
-
-    // search function;
-    var searchFunc = function(path, search_id, content_id) {
-      'use strict';
-
-      // start loading animation
-      $("body")
-        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
-          '<div id="search-loading-icon">' +
-          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
-          '</div>' +
-          '</div>')
-        .css('overflow', 'hidden');
-      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
-
-      $.ajax({
-        url: path,
-        dataType: isXml ? "xml" : "json",
-        async: true,
-        success: function(res) {
-          // get the contents from search data
-          isfetched = true;
-          $('.popup').detach().appendTo('.header-inner');
-          var datas = isXml ? $("entry", res).map(function() {
-            return {
-              title: $("title", this).text(),
-              content: $("content",this).text(),
-              url: $("url" , this).text()
-            };
-          }).get() : res;
-          var input = document.getElementById(search_id);
-          var resultContent = document.getElementById(content_id);
-          var inputEventFunction = function() {
-            var searchText = input.value.trim().toLowerCase();
-            var keywords = searchText.split(/[\s\-]+/);
-            if (keywords.length > 1) {
-              keywords.push(searchText);
-            }
-            var resultItems = [];
-            if (searchText.length > 0) {
-              // perform local searching
-              datas.forEach(function(data) {
-                var isMatch = false;
-                var hitCount = 0;
-                var searchTextCount = 0;
-                var title = data.title.trim();
-                var titleInLowerCase = title.toLowerCase();
-                var content = data.content.trim().replace(/<[^>]+>/g,"");
-                var contentInLowerCase = content.toLowerCase();
-                var articleUrl = decodeURIComponent(data.url);
-                var indexOfTitle = [];
-                var indexOfContent = [];
-                // only match articles with not empty titles
-                if(title != '') {
-                  keywords.forEach(function(keyword) {
-                    function getIndexByWord(word, text, caseSensitive) {
-                      var wordLen = word.length;
-                      if (wordLen === 0) {
-                        return [];
-                      }
-                      var startPosition = 0, position = [], index = [];
-                      if (!caseSensitive) {
-                        text = text.toLowerCase();
-                        word = word.toLowerCase();
-                      }
-                      while ((position = text.indexOf(word, startPosition)) > -1) {
-                        index.push({position: position, word: word});
-                        startPosition = position + wordLen;
-                      }
-                      return index;
-                    }
-
-                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
-                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
-                  });
-                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
-                    isMatch = true;
-                    hitCount = indexOfTitle.length + indexOfContent.length;
-                  }
-                }
-
-                // show search results
-
-                if (isMatch) {
-                  // sort index by position of keyword
-
-                  [indexOfTitle, indexOfContent].forEach(function (index) {
-                    index.sort(function (itemLeft, itemRight) {
-                      if (itemRight.position !== itemLeft.position) {
-                        return itemRight.position - itemLeft.position;
-                      } else {
-                        return itemLeft.word.length - itemRight.word.length;
-                      }
-                    });
-                  });
-
-                  // merge hits into slices
-
-                  function mergeIntoSlice(text, start, end, index) {
-                    var item = index[index.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    var hits = [];
-                    var searchTextCountInSlice = 0;
-                    while (position + word.length <= end && index.length != 0) {
-                      if (word === searchText) {
-                        searchTextCountInSlice++;
-                      }
-                      hits.push({position: position, length: word.length});
-                      var wordEnd = position + word.length;
-
-                      // move to next position of hit
-
-                      index.pop();
-                      while (index.length != 0) {
-                        item = index[index.length - 1];
-                        position = item.position;
-                        word = item.word;
-                        if (wordEnd > position) {
-                          index.pop();
-                        } else {
-                          break;
-                        }
-                      }
-                    }
-                    searchTextCount += searchTextCountInSlice;
-                    return {
-                      hits: hits,
-                      start: start,
-                      end: end,
-                      searchTextCount: searchTextCountInSlice
-                    };
-                  }
-
-                  var slicesOfTitle = [];
-                  if (indexOfTitle.length != 0) {
-                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
-                  }
-
-                  var slicesOfContent = [];
-                  while (indexOfContent.length != 0) {
-                    var item = indexOfContent[indexOfContent.length - 1];
-                    var position = item.position;
-                    var word = item.word;
-                    // cut out 100 characters
-                    var start = position - 20;
-                    var end = position + 80;
-                    if(start < 0){
-                      start = 0;
-                    }
-                    if (end < position + word.length) {
-                      end = position + word.length;
-                    }
-                    if(end > content.length){
-                      end = content.length;
-                    }
-                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
-                  }
-
-                  // sort slices in content by search text's count and hits' count
-
-                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
-                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
-                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
-                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
-                      return sliceRight.hits.length - sliceLeft.hits.length;
-                    } else {
-                      return sliceLeft.start - sliceRight.start;
-                    }
-                  });
-
-                  // select top N slices in content
-
-                  var upperBound = parseInt('1');
-                  if (upperBound >= 0) {
-                    slicesOfContent = slicesOfContent.slice(0, upperBound);
-                  }
-
-                  // highlight title and content
-
-                  function highlightKeyword(text, slice) {
-                    var result = '';
-                    var prevEnd = slice.start;
-                    slice.hits.forEach(function (hit) {
-                      result += text.substring(prevEnd, hit.position);
-                      var end = hit.position + hit.length;
-                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
-                      prevEnd = end;
-                    });
-                    result += text.substring(prevEnd, slice.end);
-                    return result;
-                  }
-
-                  var resultItem = '';
-
-                  if (slicesOfTitle.length != 0) {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
-                  } else {
-                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
-                  }
-
-                  slicesOfContent.forEach(function (slice) {
-                    resultItem += "<a href='" + articleUrl + "'>" +
-                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
-                      "...</p>" + "</a>";
-                  });
-
-                  resultItem += "</li>";
-                  resultItems.push({
-                    item: resultItem,
-                    searchTextCount: searchTextCount,
-                    hitCount: hitCount,
-                    id: resultItems.length
-                  });
-                }
-              })
-            };
-            if (keywords.length === 1 && keywords[0] === "") {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
-            } else if (resultItems.length === 0) {
-              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
-            } else {
-              resultItems.sort(function (resultLeft, resultRight) {
-                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
-                  return resultRight.searchTextCount - resultLeft.searchTextCount;
-                } else if (resultLeft.hitCount !== resultRight.hitCount) {
-                  return resultRight.hitCount - resultLeft.hitCount;
-                } else {
-                  return resultRight.id - resultLeft.id;
-                }
-              });
-              var searchResultList = '<ul class=\"search-result-list\">';
-              resultItems.forEach(function (result) {
-                searchResultList += result.item;
-              })
-              searchResultList += "</ul>";
-              resultContent.innerHTML = searchResultList;
-            }
-          }
-
-          if ('auto' === 'auto') {
-            input.addEventListener('input', inputEventFunction);
-          } else {
-            $('.search-icon').click(inputEventFunction);
-            input.addEventListener('keypress', function (event) {
-              if (event.keyCode === 13) {
-                inputEventFunction();
-              }
-            });
-          }
-
-          // remove loading animation
-          $(".local-search-pop-overlay").remove();
-          $('body').css('overflow', '');
-
-          proceedsearch();
+    
+    
+<script src="https://cdn.jsdelivr.net/npm/mathjax@2.7.5/unpacked/MathJax.js?config=TeX-MML-AM_CHTML" defer></script>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    MathJax.Hub.Config({
+        'HTML-CSS': {
+            matchFontHeight: false
+        },
+        SVG: {
+            matchFontHeight: false
+        },
+        CommonHTML: {
+            matchFontHeight: false
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$','$'],
+                ['\\(','\\)']
+            ]
         }
-      });
-    }
-
-    // handle and trigger popup window;
-    $('.popup-trigger').click(function(e) {
-      e.stopPropagation();
-      if (isfetched === false) {
-        searchFunc(path, 'local-search-input', 'local-search-result');
-      } else {
-        proceedsearch();
-      };
     });
+});
+</script>
 
-    $('.popup-btn-close').click(onPopupClose);
-    $('.popup').click(function(e){
-      e.stopPropagation();
-    });
-    $(document).on('keyup', function (event) {
-      var shouldDismissSearchPopup = event.which === 27 &&
-        $('.search-popup').is(':visible');
-      if (shouldDismissSearchPopup) {
-        onPopupClose();
-      }
-    });
-  </script>
+    
+    
+
+<a id="back-to-top" title="Back to Top" href="javascript:;">
+    <i class="fas fa-chevron-up"></i>
+</a>
+<script src="/js/back-to-top.js" defer></script>
 
 
+    
+    
+
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script>
+    <script src="/js/clipboard.js" defer></script>
+    
+
+    
+    
+    
 
 
+<script src="/js/main.js" defer></script>
 
-  
-
-  
-
-  
-
-  
-  
-
-  
-
-  
-
-  
-
+    
+    <div class="searchbox ins-search">
+    <div class="searchbox-container ins-search-container">
+        <div class="searchbox-input-wrapper">
+            <input type="text" class="searchbox-input ins-search-input" placeholder="Type something..." />
+            <span class="searchbox-close ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="searchbox-result-wrapper ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+    (function (window) {
+        var INSIGHT_CONFIG = {
+            TRANSLATION: {
+                POSTS: 'Posts',
+                PAGES: 'Pages',
+                CATEGORIES: 'Categories',
+                TAGS: 'Tags',
+                UNTITLED: '(Untitled)',
+            },
+            CONTENT_URL: '/content.json',
+        };
+        window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+    })(window);
+</script>
+<script src="/js/insight.js" defer></script>
+<link rel="stylesheet" href="/css/search.css">
+<link rel="stylesheet" href="/css/insight.css">
+    
 </body>
 </html>
