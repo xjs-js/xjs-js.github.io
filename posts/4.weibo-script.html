@@ -2,23 +2,24 @@
 <html  lang="en">
 <head>
     <meta charset="utf-8">
-<title>Hello World - Blog</title>
+<title>weibo脚本 - Blog</title>
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
 
 
 
-    <meta name="description" content="终于建立起了自己的第一个blog，哈哈哈   一切才刚刚开始">
+    <meta name="description" content="我好变态[doge]，竟然去下载别人的照片😍">
+<meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/posts/hello-world.html">
+<meta property="og:title" content="weibo脚本">
+<meta property="og:url" content="http://yoursite.com/posts/4.weibo-script.html">
 <meta property="og:site_name" content="Blog">
-<meta property="og:description" content="终于建立起了自己的第一个blog，哈哈哈   一切才刚刚开始">
+<meta property="og:description" content="我好变态[doge]，竟然去下载别人的照片😍">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-04-29T17:45:10.300Z">
+<meta property="og:updated_time" content="2019-04-30T14:18:02.075Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="终于建立起了自己的第一个blog，哈哈哈   一切才刚刚开始">
+<meta name="twitter:title" content="weibo脚本">
+<meta name="twitter:description" content="我好变态[doge]，竟然去下载别人的照片😍">
 <meta name="twitter:image" content="http://yoursite.com/images/og_image.png">
 
 
@@ -92,7 +93,7 @@
         <div class="navbar-brand is-flex-center">
             <a class="navbar-item navbar-logo" href="/">
             
-                <img src="/images/logo.svg" alt="Hello World" height="28">
+                <img src="/images/logo.svg" alt="weibo脚本" height="28">
             
             </a>
         </div>
@@ -137,13 +138,13 @@
         
         <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
             <div class="level-left">
-                <time class="level-item has-text-grey" datetime="2018-04-14T16:00:00.000Z">2018-04-15</time>
+                <time class="level-item has-text-grey" datetime="2018-05-29T07:18:08.000Z">2018-05-29</time>
                 
                 
                 <span class="level-item has-text-grey">
                     
                     
-                    2 minutes read (About 243 words)
+                    a minute read (About 126 words)
                 </span>
                 
                 
@@ -152,24 +153,29 @@
         
         <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
             
-                Hello World
+                weibo脚本
             
         </h1>
         <div class="content">
-            <p>终于建立起了自己的第一个blog，哈哈哈  </p>
-<p>一切才刚刚开始</p>
-<a id="more"></a>  
-<blockquote class="blockquote-center">罗马不是一天建成的</blockquote>
+            <blockquote class="blockquote-center">当浮一大白</blockquote>
 
-<h2 id="更改文件夹所属用户"><a href="#更改文件夹所属用户" class="headerlink" title="更改文件夹所属用户"></a>更改文件夹所属用户</h2><p>我使用的是MacDown软件来编写md文件，但是_posts文件夹下的文件打不开，因为没有权限，用户为root，安装时必须用root用户。改文件夹里的所有文件的用户即可。  </p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo -s  </span><br><span class="line">chown -R js hexo</span><br></pre></td></tr></table></figure>
-<h2 id="获取时间戳"><a href="#获取时间戳" class="headerlink" title="获取时间戳"></a>获取时间戳</h2><p>用在Front-matter的date、updated。  </p>
-<figure class="highlight bash hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">date <span class="hljs-string">"+%Y/%m/%d %H:%M:%S"</span></span><br></pre></td></tr></table></figure>
-<h2 id="增加了Google分析"><a href="#增加了Google分析" class="headerlink" title="增加了Google分析"></a>增加了Google分析</h2><p>Google搜索Google分析，注册一下，填写相关信息，最终获取到UA，在主题文件夹下的“_config.yml”中修改”google_analytics“。next网站上写的很清楚  </p>
-<h2 id="帮助博客和文档"><a href="#帮助博客和文档" class="headerlink" title="帮助博客和文档"></a>帮助博客和文档</h2><blockquote>
-<p><a href="http://theme-next.iissnan.com" target="_blank" rel="noopener">next网站</a><br><a href="https://hexo.io" target="_blank" rel="noopener">hexo网站</a><br><a href="https://thief.one/2017/03/03/Hexo搭建博客教程/" target="_blank" rel="noopener">🙏这位博主写的详细教程</a></p>
-</blockquote>
+<p><strong>一个下载微博相册的低端脚本</strong></p>
+<a id="more"></a>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><p>进入她的微博，点击“她的相册”；这时页面已经加载了一些代码，如果需要全部的照片，需要自己一直往下滑动，直到底部。  </p>
+<p>按下F12，打开开发者控制台，粘贴Javascript代码；执行。</p>
+<p><img src="/uploads/posts/weibo/1.jpg" alt="图1"> </p>
+<h2 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h2><p><img src="/uploads/posts/weibo/2.jpg" alt="图2"></p>
+<h2 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h2><p><a href="https://github.com/xjs-js/Tools/blob/master/weibo.js" target="_blank" rel="noopener">github🔗</a></p>
 
+        </div>
+        
+        <div class="level is-size-7 is-uppercase">
+            <div class="level-start">
+                <div class="level-item">
+                    <span class="is-size-6 has-text-grey has-mr-7">#</span>
+                    <a class="has-link-grey -link" href="/tags/JavaScript/">JavaScript</a>
+                </div>
+            </div>
         </div>
         
         
@@ -185,12 +191,19 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/posts/Wishare.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/posts/5.J2EE.html">
                 <i class="level-item fas fa-chevron-left"></i>
-                <span class="level-item">不知道第几届的Wishare</span>
+                <span class="level-item">J2EE复习</span>
             </a>
         </div>
         
+        
+        <div class="level-end">
+            <a class="level level-item has-link-grey  article-nav-next" href="/posts/3.tar-boom.html">
+                <span class="level-item">tar惨案</span>
+                <i class="level-item fas fa-chevron-right"></i>
+            </a>
+        </div>
         
     </div>
 </div>
@@ -211,18 +224,20 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/morty.jpg" alt="Xu, Jinsong">
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/morty.jpg" alt="NO ONE">
+                        </figure>
                     
                     
                     <p class="is-size-4 is-block">
-                        Xu, Jinsong
+                        NO ONE
                     </p>
                     
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>China</span>
+                        <span>Winterfell</span>
                     </p>
                     
                 </div>
@@ -278,21 +293,17 @@
                 Catalogue
             </h3>
             <ul class="menu-list"><li>
-        <a class="is-flex" href="#更改文件夹所属用户">
+        <a class="is-flex" href="#过程">
         <span class="has-mr-6">1</span>
-        <span>更改文件夹所属用户</span>
+        <span>过程</span>
         </a></li><li>
-        <a class="is-flex" href="#获取时间戳">
+        <a class="is-flex" href="#结果">
         <span class="has-mr-6">2</span>
-        <span>获取时间戳</span>
+        <span>结果</span>
         </a></li><li>
-        <a class="is-flex" href="#增加了Google分析">
+        <a class="is-flex" href="#脚本">
         <span class="has-mr-6">3</span>
-        <span>增加了Google分析</span>
-        </a></li><li>
-        <a class="is-flex" href="#帮助博客和文档">
-        <span class="has-mr-6">4</span>
-        <span>帮助博客和文档</span>
+        <span>脚本</span>
         </a></li></ul>
         </div>
     </div>
@@ -316,7 +327,7 @@
             <div class="level-start has-text-centered-mobile">
                 <a class="footer-logo is-block has-mb-6" href="/">
                 
-                    <img src="/images/logo.svg" alt="Hello World" height="28">
+                    <img src="/images/logo.svg" alt="weibo脚本" height="28">
                 
                 </a>
                 <p class="is-size-7">

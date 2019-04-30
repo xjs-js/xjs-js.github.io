@@ -10,12 +10,12 @@
     <meta name="description" content="《JavaEE servlet and JSP》 复习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="J2EE复习">
-<meta property="og:url" content="http://yoursite.com/posts/J2EE.html">
+<meta property="og:url" content="http://yoursite.com/posts/5.J2EE.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="《JavaEE servlet and JSP》 复习笔记">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2018-06-08T06:54:09.683Z">
+<meta property="og:updated_time" content="2019-04-30T12:57:34.005Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="J2EE复习">
 <meta name="twitter:description" content="《JavaEE servlet and JSP》 复习笔记">
@@ -143,7 +143,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    11 minutes read (About 1681 words)
+                    11 minutes read (About 1693 words)
                 </span>
                 
                 
@@ -158,10 +158,8 @@
         <div class="content">
             <blockquote class="blockquote-center">爱就像蓝天白云，晴空万里</blockquote>
 
-
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100" height="86" src="//music.163.com/outchain/player?type=2&id=28240138&auto=0&height=66"></iframe>
-
-
+<p><strong>别点开看了，没什么用</strong></p>
+<a id="more"></a>
 <h1 id="复习提纲"><a href="#复习提纲" class="headerlink" title="复习提纲"></a>复习提纲</h1><h2 id="Chapter-1"><a href="#Chapter-1" class="headerlink" title="Chapter 1"></a>Chapter 1</h2><p>大不了我全都写:<br>Servlet, ServletConfig, ServletContext, ServletRequest, ServletResponse, GenericServlet, HttpServlet, HttpServletRequest, HttpServletResponse, HttpSession </p>
 <ol>
 <li><p>处理 servlet life cycle events 的接口或类都有哪些?<br>ServletRequest, ServletContext, HttpSession</p>
@@ -177,10 +175,10 @@
 <li>HttpServlet类中都有些什么方法, 有何不同?<br>init(), service(), destroy(), doGet(), doPost(), doPut(), doHead()<br><em>doGet</em> method handles the request using HTTP GET method and is commonly used to retrieve static resources.<br><em>doPost</em> method handles the request using HTTP POST. When you enter registration data in a HTML form, the data can be sent using the HTTP POST method. The data is sent as part of the request body.<br><em>doHead</em> method handles the request using HTTP HEAD method. It is similar to the doGet method, sends the request to the server. But it only returns the header of the response.<br><em>doPut</em> method handles the request using HTTP PUT method. It allows the client to store information on the server. </li>
 </ol>
 <ol start="6">
-<li>ServletContext是做什么用的？都包含哪些方法？怎么取里面的信息？<br>a. ServletContext provides information to the servlets regarding the environment in which they are running. We can use ServletContext to find the path information of other files of the web application, access to other servlets of the web application and log the messages to the application server log file.<br>b. setAttribute(), getAttribute(), getAttributeNames(), getInitParameter(), getInitParameterNames().</li>
-</ol>
-<ol start="7">
-<li>捕捉 Servlet 生命周期的各种事件 都需要用到哪些监听器？init() 在生命周期中运行几次？<br>servlet request listener, servlet context listener, HTTP session listener. init() runs only once in the life cycle.</li>
+<li><p>ServletContext是做什么用的？都包含哪些方法？怎么取里面的信息？<br>a. ServletContext provides information to the servlets regarding the environment in which they are running. We can use ServletContext to find the path information of other files of the web application, access to other servlets of the web application and log the messages to the application server log file.<br>b. setAttribute(), getAttribute(), getAttributeNames(), getInitParameter(), getInitParameterNames().</p>
+</li>
+<li><p>捕捉 Servlet 生命周期的各种事件 都需要用到哪些监听器？init() 在生命周期中运行几次？<br>servlet request listener, servlet context listener, HTTP session listener. init() runs only once in the life cycle.</p>
+</li>
 </ol>
 <ol start="8">
 <li><p>http是什么？有什么特点？能否存储状态？<br>a. HTTP is short for HyperText Transfer Protocal. It is an application-level protocal. It is used to deliver data on the world wide web.<br>b. simple but powerful, connectionless, stateless, media independent<br>c. No</p>
@@ -216,6 +214,7 @@
 <li>JSP consists of four components. What are they?  </li>
 </ul>
 <figure class="highlight plain hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">JSP directives - [page, taglib, include]</span><br><span class="line">page: &lt;%@ page language=&quot;java&quot;  %&gt;</span><br><span class="line">taglib: </span><br><span class="line">include: &lt;%@ include file=&quot;xxx.html&quot; %&gt;</span><br><span class="line"></span><br><span class="line">JSP scripting - embed Java code directly into an HTML page</span><br><span class="line"></span><br><span class="line">JSP implict objects</span><br><span class="line">-[request, response, config, pageContext, out, session, page, application, exception]</span><br><span class="line"></span><br><span class="line">JSP actions </span><br><span class="line">&lt;jsp:useBeans&gt;</span><br><span class="line">&lt;jsp:include&gt;</span><br></pre></td></tr></table></figure>
+<p>​    </p>
 <ul>
 <li>JSP有哪些隐含可用的对象?<br>application, exception, request, response, out, config, pageContext, page, session</li>
 </ul>
@@ -263,7 +262,7 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/posts/UML复习.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/posts/6.UML复习.html">
                 <i class="level-item fas fa-chevron-left"></i>
                 <span class="level-item">UML复习</span>
             </a>
@@ -271,7 +270,7 @@
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/posts/weibo.html">
+            <a class="level level-item has-link-grey  article-nav-next" href="/posts/4.weibo-script.html">
                 <span class="level-item">weibo脚本</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
@@ -296,18 +295,20 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/morty.jpg" alt="Xu, Jinsong">
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/morty.jpg" alt="NO ONE">
+                        </figure>
                     
                     
                     <p class="is-size-4 is-block">
-                        Xu, Jinsong
+                        NO ONE
                     </p>
                     
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>China</span>
+                        <span>Winterfell</span>
                     </p>
                     
                 </div>

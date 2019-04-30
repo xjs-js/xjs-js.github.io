@@ -11,12 +11,12 @@
 <meta name="keywords" content="NOJ">
 <meta property="og:type" content="article">
 <meta property="og:title" content="不知道第几届的Wishare">
-<meta property="og:url" content="http://yoursite.com/posts/Wishare.html">
+<meta property="og:url" content="http://yoursite.com/posts/1.wishare.html">
 <meta property="og:site_name" content="Blog">
 <meta property="og:description" content="又是一年的学校ACM比赛，今年只水了三题，水平下降">
 <meta property="og:locale" content="en">
 <meta property="og:image" content="http://yoursite.com/images/og_image.png">
-<meta property="og:updated_time" content="2019-04-29T18:38:14.564Z">
+<meta property="og:updated_time" content="2019-04-30T12:49:57.042Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="不知道第几届的Wishare">
 <meta name="twitter:description" content="又是一年的学校ACM比赛，今年只水了三题，水平下降">
@@ -144,7 +144,7 @@
                 <span class="level-item has-text-grey">
                     
                     
-                    4 minutes read (About 627 words)
+                    4 minutes read (About 655 words)
                 </span>
                 
                 
@@ -157,7 +157,9 @@
             
         </h1>
         <div class="content">
-            <h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><p><a href="http://acm.njupt.edu.cn/acmhome/problemdetail.do?&amp;method=showdetail&amp;id=2251" target="_blank" rel="noopener">清汤拉面</a><br>这题简单，找到规律🌝  </p>
+            <p><strong>大学第三次参加，当然只是网络赛玩玩，绝不去现场比赛🌚</strong></p>
+<a id="more"></a>
+<h2 id="A"><a href="#A" class="headerlink" title="A"></a>A</h2><p><a href="http://acm.njupt.edu.cn/acmhome/problemdetail.do?&amp;method=showdetail&amp;id=2251" target="_blank" rel="noopener">清汤拉面</a><br>这题简单，找到规律🌝  </p>
 <figure class="highlight cpp hljs"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span></span></span><br><span class="line"><span class="hljs-function"></span>&#123;</span><br><span class="line">    <span class="hljs-keyword">int</span> a, b, c;</span><br><span class="line">    <span class="hljs-keyword">int</span> N;</span><br><span class="line">    <span class="hljs-keyword">int</span> maxNum;</span><br><span class="line">    <span class="hljs-keyword">int</span> t = <span class="hljs-number">0</span>;</span><br><span class="line">    <span class="hljs-built_in">cin</span> &gt;&gt; N;</span><br><span class="line">    <span class="hljs-keyword">while</span>(N--)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="hljs-built_in">cin</span> &gt;&gt; a &gt;&gt; b &gt;&gt; c;</span><br><span class="line">        maxNum = a &gt; b ? a : b;</span><br><span class="line">        maxNum = maxNum &gt; c ? maxNum : c;</span><br><span class="line"></span><br><span class="line">        t = (maxNum-a) + (maxNum-b) + (maxNum-c);</span><br><span class="line">        <span class="hljs-keyword">if</span>(t % <span class="hljs-number">2</span> == <span class="hljs-number">0</span>)</span><br><span class="line">            <span class="hljs-built_in">cout</span> &lt;&lt; t/<span class="hljs-number">2</span> &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">        <span class="hljs-keyword">else</span></span><br><span class="line">            <span class="hljs-built_in">cout</span> &lt;&lt; (t+<span class="hljs-number">1</span>)/<span class="hljs-number">2</span>+<span class="hljs-number">1</span> &lt;&lt; <span class="hljs-built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="B"><a href="#B" class="headerlink" title="B"></a>B</h2><p><a href="http://acm.njupt.edu.cn/acmhome/problemdetail.do?&amp;method=showdetail&amp;id=2252" target="_blank" rel="noopener">味增拉面</a><br>不会🌚，看样子要图    </p>
 <h2 id="C"><a href="#C" class="headerlink" title="C"></a>C</h2><p><a href="http://acm.njupt.edu.cn/acmhome/problemdetail.do?&amp;method=showdetail&amp;id=2253" target="_blank" rel="noopener">货物处理</a><br>不会🌚，要用到动态规划，忘了  </p>
@@ -203,7 +205,7 @@
     <div class="level post-navigation is-flex-wrap is-mobile">
         
         <div class="level-start">
-            <a class="level level-item has-link-grey  article-nav-prev" href="/posts/15213-Week2-1.html">
+            <a class="level level-item has-link-grey  article-nav-prev" href="/posts/2.linux-boot-camp.html">
                 <i class="level-item fas fa-chevron-left"></i>
                 <span class="level-item">Linux Boot Camp</span>
             </a>
@@ -211,7 +213,7 @@
         
         
         <div class="level-end">
-            <a class="level level-item has-link-grey  article-nav-next" href="/posts/hello-world.html">
+            <a class="level level-item has-link-grey  article-nav-next" href="/posts/0.hello-world.html">
                 <span class="level-item">Hello World</span>
                 <i class="level-item fas fa-chevron-right"></i>
             </a>
@@ -236,18 +238,20 @@
             <div class="level-item has-text-centered">
                 <div>
                     
-                        <img class="image is-128x128 has-mb-6" src="/images/morty.jpg" alt="Xu, Jinsong">
+                        <figure class="image is-128x128 has-mb-6">
+                            <img class="is-rounded" src="/images/morty.jpg" alt="NO ONE">
+                        </figure>
                     
                     
                     <p class="is-size-4 is-block">
-                        Xu, Jinsong
+                        NO ONE
                     </p>
                     
                     
                     
                     <p class="is-size-6 is-flex is-flex-center has-text-grey">
                         <i class="fas fa-map-marker-alt has-mr-7"></i>
-                        <span>China</span>
+                        <span>Winterfell</span>
                     </p>
                     
                 </div>
